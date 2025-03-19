@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>project</title>
+</head>
+
+<body>
+  <header id="title">
+  <h1>My Task Board</h1>
+  </header>
+  <form class="taskForm" onsubmit="addTask(event)">
+    <p>
+      <label class="formValues">Date
+        <input id="date" class="inputs" onfocus="(this.type='date')" onblur="(this.type='text')" value="" required="required"
+          style="color: grey" placeholder="Enter the task date">
+      </label>
+    </p>
+    <p>
+      <label class="formValues">Time
+        <input id="time"  class="inputs" placeholder="Enter the task time" onfocus="(this.type='time')" onblur="(this.type='text')"
+          value="">
+      </label>
+    </p>
+    <p>
+
+      <label for="textarea" id="taskInput" class="formValues">Task:</label>
+      <textarea placeholder="Enter task details in here" class="inputs" required="required"
+        style="color: grey" id="task"></textarea>
+    </p>
+    <p>
+    
+      <input type="submit" value="Save" id="savebutton">
+      <input type="button" onclick="resetTask()" value="Reset" id="resetbutton">
+    </p>
+  </form>
+
+  <div id="tasksContainer" class="container">
+    <div id="taskRow" class="row" >
+      <div class="col-sm-5 col-lg-3"></div>
+    </div>
+  </div>
+
+  
+
+</body>
+<script src="Task.js"></script>
+<script src="script.js"></script>
+
+</html>
